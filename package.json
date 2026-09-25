@@ -1,0 +1,16 @@
+{
+  "name": "download-re-extensioner-o-matic",
+  "version": "1.0.0",
+  "description": "Chrome extension that changes the extension of downloaded files based on per-domain rules.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/",
+    "icons": "node tools/make-icons.js",
+    "package": "node scripts/package.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

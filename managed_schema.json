@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "managedRules": {
+      "title": "Organization rename rules",
+      "description": "Rules set by the organization. Checked before any user-defined rules; the first matching enabled rule wins.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "title": "Domain",
+            "description": "Hostname to match, e.g. example.com. Subdomains also match.",
+            "type": "string"
+          },
+          "sourceExtension": {
+            "title": "Source extension",
+            "description": "Extension to replace, e.g. text",
+            "type": "string"
+          },
+          "targetExtension": {
+            "title": "Target extension",
+            "description": "Replacement extension, e.g. csv",
+            "type": "string"
+          },
+          "enabled": {
+            "title": "Enabled",
+            "description": "Whether the rule is active. Defaults to true.",
+            "type": "boolean"
+          },
+          "label": {
+            "title": "Label",
+            "description": "Optional description shown in the options page.",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "allowUserRules": {
+      "title": "Allow user-defined rules",
+      "description": "When false, user-defined rules are ignored and hidden in the options page. Defaults to true.",
+      "type": "boolean"
+    }
+  }
+}
