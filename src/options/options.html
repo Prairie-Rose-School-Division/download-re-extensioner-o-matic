@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Download Re-Extensioner-o-Matic settings</title>
+  <link rel="stylesheet" href="options.css">
+  <script type="module" src="options.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="page-header">
+    <img src="../../icons/icon48.png" width="40" height="40" alt="">
+    <div>
+      <h1>Download Re-Extensioner-o-Matic</h1>
+      <p class="subtitle">Changes the file extension of downloads from sites you choose. Nothing is read from your files and nothing leaves your browser.</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="org-section" class="card" aria-labelledby="org-heading" hidden>
+      <h2 id="org-heading">Organization rules</h2>
+      <p class="hint">Set by your organization. These are checked first and can't be changed here.</p>
+      <ul id="org-rules" class="rule-list"></ul>
+    </section>
+
+    <section id="user-section" class="card" aria-labelledby="user-heading">
+      <div class="section-head">
+        <h2 id="user-heading">Your rules</h2>
+        <button type="button" id="add-rule" class="button primary">Add rule</button>
+      </div>
+
+      <p id="user-disabled-notice" class="notice" hidden>
+        Your organization has turned off personal rules. Only organization rules apply.
+      </p>
+
+      <form id="rule-form" class="rule-form" novalidate hidden aria-labelledby="rule-form-heading">
+        <h3 id="rule-form-heading">Add rule</h3>
+
+        <div class="field">
+          <label for="rule-domain">Domain</label>
+          <input id="rule-domain" name="domain" type="text" inputmode="url" autocomplete="off" spellcheck="false"
+                 placeholder="example.com" aria-describedby="rule-domain-hint rule-domain-error" required>
+          <p id="rule-domain-hint" class="hint">Also matches subdomains. You can paste a full web address.</p>
+          <p id="rule-domain-error" class="error" hidden></p>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="rule-source">Change extension</label>
+            <input id="rule-source" name="sourceExtension" type="text" autocomplete="off" spellcheck="false"
+                   placeholder=".text" aria-describedby="rule-source-error" required>
+            <p id="rule-source-error" class="error" hidden></p>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="field">
+            <label for="rule-target">To extension</label>
+            <input id="rule-target" name="targetExtension" type="text" autocomplete="off" spellcheck="false"
+                   placeholder=".csv" aria-describedby="rule-target-error" required>
+            <p id="rule-target-error" class="error" hidden></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="rule-label">Label <span class="optional">(optional)</span></label>
+          <input id="rule-label" name="label" type="text" maxlength="100" autocomplete="off"
+                 placeholder="e.g. PowerSchool Quick Export">
+        </div>
+
+        <div class="field checkbox-field">
+          <input id="rule-enabled" name="enabled" type="checkbox" checked>
+          <label for="rule-enabled">Enabled</label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="button primary" id="rule-save">Save rule</button>
+          <button type="button" class="button" id="rule-cancel">Cancel</button>
+        </div>
+      </form>
+
+      <ul id="user-rules" class="rule-list"></ul>
+      <p id="user-empty" class="empty" hidden>No rules yet. Choose “Add rule” to create one.</p>
+    </section>
+
+    <section id="test-section" class="card" aria-labelledby="test-heading">
+      <h2 id="test-heading">Test a download</h2>
+      <p class="hint">Check which rule would apply to a download. Nothing is downloaded.</p>
+
+      <form id="test-form" novalidate>
+        <div class="field">
+          <label for="test-url">Download URL</label>
+          <input id="test-url" name="url" type="text" inputmode="url" autocomplete="off" spellcheck="false"
+                 placeholder="https://example.com/export" aria-describedby="test-url-error" required>
+          <p id="test-url-error" class="error" hidden></p>
+        </div>
+        <div class="field">
+          <label for="test-filename">Filename</label>
+          <input id="test-filename" name="filename" type="text" autocomplete="off" spellcheck="false"
+                 placeholder="student_export.text" aria-describedby="test-filename-error" required>
+          <p id="test-filename-error" class="error" hidden></p>
+        </div>
+        <div class="field">
+          <label for="test-referrer">Referring page <span class="optional">(optional)</span></label>
+          <input id="test-referrer" name="referrer" type="text" inputmode="url" autocomplete="off" spellcheck="false"
+                 placeholder="https://example.com/admin" aria-describedby="test-referrer-hint">
+          <p id="test-referrer-hint" class="hint">Used when the download URL has no website address, such as data: URLs.</p>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="button primary">Test</button>
+        </div>
+      </form>
+
+      <div id="test-result" class="test-result" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
