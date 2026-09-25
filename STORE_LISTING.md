@@ -76,5 +76,4 @@ Tools (Productivity)
 - [ ] Final icons (128×128 store icon; 16/48/128 in `icons/`)
 - [ ] At least one screenshot, 1280×800 or 640×400 (for example, the settings page with a rule and a test result)
 - [ ] Optional small promo tile, 440×280
-- [ ] Contact email in `PRIVACY.md`
 - [ ] If the repo is made public, consider adding "Open source under the MIT license" to the full description

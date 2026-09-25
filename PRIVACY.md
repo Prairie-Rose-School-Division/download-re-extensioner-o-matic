@@ -44,4 +44,4 @@ If this policy changes, the updated version will be published at this address wi
 
 ## Contact
 
-Questions about this policy: [CONTACT EMAIL], Prairie Rose Public Schools, Alberta, Canada.
+Questions about this policy: [iancooper@prrd8.ca](mailto:iancooper@prrd8.ca), Prairie Rose Public Schools, Alberta, Canada.
