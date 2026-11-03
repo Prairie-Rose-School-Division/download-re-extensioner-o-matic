@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  width: 1280px;
+  height: 800px;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+  background: linear-gradient(160deg, #eff6ff 0%, #dbeafe 55%, #fef3c7 100%);
+}
+.caption { padding: 56px 72px 0; }
+.caption h1 { font-size: 44px; line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
+.caption p { font-size: 22px; color: #334155; margin: 12px 0 0; max-width: 980px; }
+.window {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f5f6f8;
+  box-shadow: 0 30px 60px rgb(15 23 42 / 0.18), 0 0 0 1px rgb(15 23 42 / 0.08);
+}
+.window .bar {
+  height: 36px;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+}
+.window .bar i { width: 12px; height: 12px; border-radius: 50%; background: #cbd5e1; }
+.window iframe { display: block; width: 1000px; border: 0; }

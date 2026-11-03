@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="store.css">
+<style>
+  .grid { display: flex; gap: 40px; padding: 40px 72px 0; align-items: flex-start; }
+  .grid > div { flex: 1 1 0; }
+  .label { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1e40af; margin: 0 0 12px; }
+  pre {
+    margin: 0; padding: 26px 28px; border-radius: 14px;
+    background: #0f172a; color: #e2e8f0;
+    font: 17px/1.55 ui-monospace, Menlo, monospace;
+    box-shadow: 0 20px 44px rgb(15 23 42 / 0.2);
+  }
+  pre .k { color: #93c5fd; } pre .s { color: #fcd34d; } pre .b { color: #86efac; }
+  .panel { border-radius: 14px; overflow: hidden; box-shadow: 0 20px 44px rgb(15 23 42 / 0.15), 0 0 0 1px rgb(15 23 42 / 0.08); }
+  .panel iframe { display: block; width: 100%; height: 360px; border: 0; }
+  ul { margin: 22px 0 0; padding: 0 0 0 22px; font-size: 19px; color: #334155; line-height: 1.6; }
+</style></head>
+<body>
+  <div class="caption">
+    <h1>Ready for schools and organizations.</h1>
+    <p>Push rules to managed Chromebooks and browsers with Chrome policy. Organization rules come first and can't be changed by users.</p>
+  </div>
+  <div class="grid">
+    <div>
+      <p class="label">Policy for extensions</p>
+<pre>{
+  <span class="k">"managedRules"</span>: {
+    <span class="k">"Value"</span>: [{
+      <span class="k">"domain"</span>: <span class="s">"ps.example.org"</span>,
+      <span class="k">"sourceExtension"</span>: <span class="s">"text"</span>,
+      <span class="k">"targetExtension"</span>: <span class="s">"csv"</span>
+    }]
+  },
+  <span class="k">"allowUserRules"</span>: { <span class="k">"Value"</span>: <span class="b">true</span> }
+}</pre>
+    </div>
+    <div>
+      <p class="label">What staff see</p>
+      <div class="panel"><iframe src="/src/options/harness.html" scrolling="no"></iframe></div>
+      <ul>
+        <li>Only the “downloads” and “storage” permissions</li>
+        <li>Never reads file contents</li>
+        <li>No data collected or sent anywhere</li>
+      </ul>
+    </div>
+  </div>
+</body></html>

@@ -71,9 +71,22 @@ Tools (Productivity)
   - I do not use or transfer user data to determine creditworthiness or for lending purposes.
 - **Privacy policy URL:** must be publicly reachable. The GitHub repo is private, so either host `PRIVACY.md` on the division website or make the repo public and link to the file.
 
-## Assets still needed
+## Images
 
-- [ ] Final icons (128×128 store icon; 16/48/128 in `icons/`)
-- [ ] At least one screenshot, 1280×800 or 640×400 (for example, the settings page with a rule and a test result)
-- [ ] Optional small promo tile, 440×280
+All in `store/`, rendered by `npm run assets`. Screenshots are 1280×800 PNGs without transparency, as the Web Store requires.
+
+| File | Upload as | Shows |
+| --- | --- | --- |
+| `icons/icon128.png` | Store icon | 96×96 artwork with 16px padding, per Web Store guidelines |
+| `store/screenshot-1-overview.png` | Screenshot 1 | `student_export.text` becoming `student_export.csv` |
+| `store/screenshot-2-rules.png` | Screenshot 2 | Settings page with organization and personal rules |
+| `store/screenshot-3-test.png` | Screenshot 3 | "Test a download" with a match |
+| `store/screenshot-4-admin.png` | Screenshot 4 | Admin console policy JSON next to what staff see |
+| `store/promo-small-440x280.png` | Small promo tile | Name, tagline, and `.text → .csv` |
+
+The screenshots use example domains (`example.org`, `example.com`, `example.net`), not real division hosts.
+
+## Still to do
+
+- [ ] Host the privacy policy at a public URL
 - [ ] If the repo is made public, consider adding "Open source under the MIT license" to the full description

@@ -109,12 +109,12 @@ npm run package
 ```
 
 ```bash
-npm run icons
+npm run assets
 ```
 
 - `npm test` runs the unit tests with Node's built-in test runner (`node --test`).
 - `npm run package` writes `dist/download-re-extensioner-o-matic-<version>.zip` for Web Store upload. It includes only `manifest.json`, `managed_schema.json`, `LICENSE`, `src/` and `icons/`.
-- `npm run icons` regenerates the placeholder icons. To use your own, replace the files in `icons/`.
+- `npm run assets` renders the icons (`icons/`) and the Web Store images (`store/`) with headless Chrome. The icon artwork is `tools/assets/icon.svg`, and the store images are HTML pages in `tools/assets/` that embed the real settings page with demo data. Run `npm run assets icons` or `npm run assets store` to render only one set. Set `CHROME_PATH` if Chrome isn't found.
 
 When releasing, bump `version` in both `manifest.json` and `package.json`. The package script refuses to run if they don't match.
 
@@ -130,7 +130,8 @@ src/lib/handler.js     onDeterminingFilename listener; always calls suggest() ex
 src/options/           Settings page (HTML/CSS/JS, no external resources)
 test/                  Unit tests (node --test)
 scripts/package.js     Builds the Web Store zip
-tools/                 Icon generator
+tools/                 Icon and store image renderer (headless Chrome)
+store/                 Web Store screenshots and promo tile
 ```
 
 ### How the download listener works

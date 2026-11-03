@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="store.css">
+<style>
+  body { display: flex; align-items: center; gap: 64px; padding: 0 88px; }
+  .copy { flex: 1 1 0; }
+  .copy img { width: 96px; height: 96px; }
+  .copy h1 { font-size: 52px; line-height: 1.1; margin: 28px 0 0; letter-spacing: -0.025em; }
+  .copy p { font-size: 22px; color: #334155; line-height: 1.45; margin: 20px 0 0; }
+  .demo { flex: 0 0 520px; display: flex; flex-direction: column; align-items: center; gap: 22px; }
+  .file {
+    width: 100%; display: flex; align-items: center; gap: 18px;
+    background: #fff; border-radius: 16px; padding: 22px 26px;
+    box-shadow: 0 16px 40px rgb(15 23 42 / 0.12);
+    font-size: 26px; font-weight: 600;
+  }
+  .file .doc { width: 44px; height: 54px; border-radius: 6px; flex: none; }
+  .file small { display: block; font-size: 16px; font-weight: 500; color: #64748b; margin-top: 2px; }
+  .before .doc { background: #e2e8f0; }
+  .before .ext { color: #b91c1c; text-decoration: line-through; text-decoration-thickness: 3px; }
+  .after .doc { background: #16a34a; }
+  .after .ext { color: #15803d; }
+  .arrow { width: 64px; height: 64px; border-radius: 50%; background: #f59e0b; color: #fff;
+           display: grid; place-items: center; font-size: 36px; font-weight: 700;
+           box-shadow: 0 10px 24px rgb(245 158 11 / 0.35); }
+  .rule { font-size: 17px; color: #1e3a8a; background: #dbeafe; border-radius: 999px; padding: 8px 18px; font-weight: 600; }
+  .rule code { font-family: ui-monospace, Menlo, monospace; }
+</style></head>
+<body>
+  <div class="copy">
+    <img src="/icons/icon128.png" alt="">
+    <h1>Downloads arrive with the right extension.</h1>
+    <p>Set a rule once and every matching download is renamed as it saves, so exports open in the right app right away. No manual renaming.</p>
+  </div>
+  <div class="demo">
+    <div class="file before"><span class="doc"></span><div>student_export<span class="ext">.text</span><small>Saved by the website</small></div></div>
+    <div class="arrow">↓</div>
+    <div class="file after"><span class="doc"></span><div>student_export<span class="ext">.csv</span><small>Opens in your spreadsheet app</small></div></div>
+    <div class="rule">Rule: <code>ps.example.org</code> · <code>.text → .csv</code></div>
+  </div>
+</body></html>

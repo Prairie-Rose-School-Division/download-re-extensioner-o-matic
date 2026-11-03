@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <!-- Artwork is drawn in a 96x96 box. render-assets.js adds padding per size. -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="96" height="96" rx="22" fill="url(#tile)"/>
+
+  <!-- Document with folded corner -->
+  <path d="M24 12h28l18 18v50a5 5 0 0 1-5 5H24a5 5 0 0 1-5-5V17a5 5 0 0 1 5-5z" fill="#fff"/>
+  <path d="M52 12v13a5 5 0 0 0 5 5h13z" fill="#bfdbfe"/>
+
+  <!-- Spreadsheet grid -->
+  <g class="detail" fill="#93c5fd">
+    <rect x="26" y="38" width="36" height="5" rx="1.5"/>
+    <rect x="26" y="48" width="36" height="5" rx="1.5"/>
+    <rect x="26" y="58" width="22" height="5" rx="1.5"/>
+    <rect x="26" y="68" width="16" height="5" rx="1.5"/>
+  </g>
+
+  <!-- Change badge -->
+  <circle cx="70" cy="70" r="22" fill="#1e4fd6"/>
+  <circle cx="70" cy="70" r="18" fill="#f59e0b"/>
+  <g fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 67h17"/>
+    <path d="M72 61l6 6-6 6"/>
+  </g>
+</svg>

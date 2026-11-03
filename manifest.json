@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Download Re-Extensioner-o-Matic",
   "short_name": "Re-Extensioner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically changes the file extension of downloads from sites you choose, e.g. .text to .csv.",
   "permissions": ["downloads", "storage"],
   "background": {
