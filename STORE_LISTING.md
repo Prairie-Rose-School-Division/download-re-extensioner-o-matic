@@ -33,6 +33,7 @@ _116 of 132 characters_
 > • Never opens or reads the contents of your files.
 > • Collects nothing, tracks nothing, and makes no network requests.
 > • Uses only two permissions: "downloads" and "storage". No access to the websites you visit.
+> • Open source under the MIT license, so anyone can check the code.
 >
 > Note: Chrome lets only one extension choose a download's filename. If another installed extension also renames downloads, the two may conflict.
 
@@ -69,7 +70,7 @@ Tools (Productivity)
   - I do not sell or transfer user data to third parties, outside of the approved use cases.
   - I do not use or transfer user data for purposes unrelated to my item's single purpose.
   - I do not use or transfer user data to determine creditworthiness or for lending purposes.
-- **Privacy policy URL:** must be publicly reachable. The GitHub repo is private, so either host `PRIVACY.md` on the division website or make the repo public and link to the file.
+- **Privacy policy URL:** https://github.com/Prairie-Rose-School-Division/download-re-extensioner-o-matic/blob/main/PRIVACY.md
 
 ## Images
 
@@ -88,5 +89,4 @@ The screenshots use example domains (`example.org`, `example.com`, `example.net`
 
 ## Still to do
 
-- [ ] Host the privacy policy at a public URL
-- [ ] If the repo is made public, consider adding "Open source under the MIT license" to the full description
+- [ ] Make the GitHub repo public so the privacy policy URL works
