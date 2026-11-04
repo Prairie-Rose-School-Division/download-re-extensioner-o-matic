@@ -8,6 +8,8 @@ Some web apps save files with the wrong extension. PowerSchool's Quick Export, f
 - Nothing else about the download changes. The extension never reads file contents and never sends anything anywhere. See [PRIVACY.md](PRIVACY.md).
 - Works on Chromebooks and in Chrome on Windows, macOS and Linux.
 
+> **On Chromebooks**, a renamed PowerSchool export still opens badly. As `.csv` it lands in the Basic Editor with the tabs ignored, and ChromeOS has no app for `.tsv` at all. The companion extension [PowerSchool Export Opener](https://github.com/Prairie-Rose-School-Division/powerschool-export-opener) fixes this. Use this extension to rename `.text` to `.tsv`, and the opener sends `.tsv` files straight into Google Sheets. It's a separate extension because, unlike this one, it reads the file and uploads it to the user's Google Drive.
+
 ## How rules work
 
 Each rule has:
