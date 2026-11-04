@@ -27,7 +27,11 @@ For each download, the extension collects the host of the download's final URL (
 
 Rules are checked in order and **the first enabled rule that matches wins**. Organization (managed) rules are always checked before personal rules. If no rule matches, the download is left alone. If a file with the new name already exists, Chrome adds a number (`student_export (1).csv`).
 
-## Install (unpacked, for testing)
+## Install
+
+**From the Chrome Web Store:** [Download Re-Extensioner-o-Matic](https://chromewebstore.google.com/detail/download-re-extensioner-o/hfekcbakhgaklckochhdcpohfehbfdfh) (extension ID `hfekcbakhgaklckochhdcpohfehbfdfh`). Use this ID when force-installing it from the Google Admin console.
+
+## Install unpacked (for development)
 
 1. Download or clone this repository.
 2. In Chrome, go to `chrome://extensions`.
